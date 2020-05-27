@@ -9,7 +9,7 @@ services:
       dockerfile: Dockerfile
     network_mode: host
     ports:
-      - "3001:3001"
+      - "3000:3000"
     environment:
       - APP_SECRET=Pogotudinal
       - PASS_REQS=1020
