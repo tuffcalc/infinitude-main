@@ -1,5 +1,9 @@
 FROM ubuntu:latest
 
+RUN apt-get update && apt-get install -y tzdata
+# Testing command: Print the date.  It will be in the timezone set from the compose file.
+CMD date
+
 RUN apt-get update && apt-get -y upgrade \
 	&& apt-get install -y git build-essential cpanminus libchi-perl libmojolicious-perl libdatetime-perl libxml-simple-perl libmoo-perl libjson-maybexs-perl libhash-asobject-perl libdata-parsebinary-perl libdigest-crc-perl libcache-perl libtest-longstring-perl libio-pty-perl \
 	&& git clone https://tuffcalc/infinitude-main/infinitude-main.git /infinitude-main \ 
