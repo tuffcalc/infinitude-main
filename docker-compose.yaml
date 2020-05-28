@@ -1,6 +1,8 @@
 version: "2.1"
 
 services:
+ timezone:
+    build:
   infinitude:
     container_name: infinitude
     hostname: infinitude
